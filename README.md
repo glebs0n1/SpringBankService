@@ -1,2 +1,3 @@
 # SpringBankService
-Spring Bank Transfer from user1 to user2
+
+Developed as part of an introduction to Spring frameworks  Programming during my learning Back-End - An integrated Banking Software system - Users may transfer money, and you can see the User's amount and balance
