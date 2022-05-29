@@ -18,7 +18,6 @@ public class BalanceController {
     public BigDecimal getBalance(@PathVariable Long accountId) {
         return bankService.getBalance(accountId);
     }
-
     @PostMapping("/add")
     public BigDecimal addMoney (@RequestBody BalanceId transferBalance) {
         return bankService.addMoney(transferBalance.getTo(), transferBalance.getAmount());
