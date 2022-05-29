@@ -17,7 +17,6 @@ public class BalanceController {
     @GetMapping("/{accountId}")
     public BigDecimal getBalance(@PathVariable Long accountId) {
         return bankService.getBalance(accountId);
-
     }
 
     @PostMapping("/add")
