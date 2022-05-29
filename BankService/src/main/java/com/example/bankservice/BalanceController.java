@@ -33,8 +33,4 @@ public class BalanceController {
         log.error(e.getMessage());
         return "UPS,SOMETHING HAD HAPPENED!";
     }
-
-
-
-
 }
