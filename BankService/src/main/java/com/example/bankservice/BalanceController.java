@@ -22,7 +22,6 @@ public class BalanceController {
     public BigDecimal addMoney (@RequestBody BalanceId transferBalance) {
         return bankService.addMoney(transferBalance.getTo(), transferBalance.getAmount());
     }
-
     @PostMapping("/transfer")
     public void makeTransfer (@RequestBody BalanceId transferBalance) {
         bankService.makeTransfer(transferBalance);
