@@ -12,8 +12,6 @@ public class BankService {
 
 
     private final BalanceRepository repository;
-
-
     public BigDecimal getBalance(Long accountId) {
         BigDecimal balance = repository.getBalanceForId(accountId);
         if (balance == null) {
@@ -51,7 +49,6 @@ public class BankService {
 
         BigDecimal updatedFromBalance = fromBalance.subtract(transferBalance.getAmount());
         BigDecimal updatedToBalance = toBalance.add(transferBalance.getAmount());
-
         repository.save(transferBalance.getFrom(), updatedFromBalance);
         repository.save(transferBalance.getTo(), updatedToBalance);
 
