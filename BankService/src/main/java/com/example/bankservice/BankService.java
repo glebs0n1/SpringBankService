@@ -9,8 +9,6 @@ import java.math.BigDecimal;
 @Service
 @AllArgsConstructor
 public class BankService {
-
-
     private final BalanceRepository repository;
     public BigDecimal getBalance(Long accountId) {
         BigDecimal balance = repository.getBalanceForId(accountId);
