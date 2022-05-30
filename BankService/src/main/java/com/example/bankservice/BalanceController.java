@@ -26,7 +26,6 @@ public class BalanceController {
     public void makeTransfer (@RequestBody BalanceId transferBalance) {
         bankService.makeTransfer(transferBalance);
     }
-
     @ExceptionHandler(IllegalArgumentException.class)
     public String handle(IllegalArgumentException e) {
         log.error(e.getMessage());
