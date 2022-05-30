@@ -18,7 +18,6 @@ public class BankService {
         else
             return repository.getBalanceForId(accountId);
     }
-
     public BigDecimal addMoney(Long to, BigDecimal amount) {
 
         BigDecimal currentBalance = repository.getBalanceForId(to);
@@ -31,7 +30,6 @@ public class BankService {
             repository.save(to, updatedBalance);
             return updatedBalance;
         }
-
     }
     //Business logic
     public void makeTransfer(BalanceId transferBalance) {
