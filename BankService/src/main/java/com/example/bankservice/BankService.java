@@ -40,11 +40,12 @@ public class BankService {
         BigDecimal fromBalance = repository.getBalanceForId(transferBalance.getFrom());
         BigDecimal toBalance = repository.getBalanceForId(transferBalance.getFrom());
 
-        if (fromBalance == null || toBalance == null) {
+        if (fromBalance == null
+            || toBalance == null) {
             throw new IllegalArgumentException("No Ids");
         }
         if (transferBalance.getAmount().compareTo(fromBalance) > 0) {
-            throw new IllegalArgumentException("no money");
+            throw new IllegalArgumentException("Sorry, no money");
         }
 
         BigDecimal updatedFromBalance = fromBalance.subtract(transferBalance.getAmount());
