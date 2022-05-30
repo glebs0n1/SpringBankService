@@ -47,12 +47,10 @@ public class BankService {
         if (transferBalance.getAmount().compareTo(fromBalance) > 0) {
             throw new IllegalArgumentException("Sorry, no money");
         }
-
         BigDecimal updatedFromBalance = fromBalance.subtract(transferBalance.getAmount());
         BigDecimal updatedToBalance = toBalance.add(transferBalance.getAmount());
         repository.save(transferBalance.getFrom(), updatedFromBalance);
-        repository.save(transferBalance.getTo(), updatedToBalance);
-
-
+        repository.save(transferBalance.getTo(), 
+                        updatedToBalance);
     }
 }
